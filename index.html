@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Organizer App</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Floating shapes for background vibe -->
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+
+      <header>
+        <div class="logo">
+          <span class="icon">✨</span>
+          <h1>Organizer</h1>
+        </div>
+        <p class="subtitle">Что запланируем?</p>
+      </header>
+
+      <main>
+        <div class="form-card">
+          <div class="input-group">
+            <label>Название задачи</label>
+            <input
+              type="text"
+              id="taskInput"
+              placeholder="Например: Купить молоко..."
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="chips-group">
+            <label>Приоритет</label>
+            <div class="chips" id="priorityChips">
+              <button class="chip active" data-value="normal">Обычный</button>
+              <button class="chip" data-value="high">⚡ Важно</button>
+              <button class="chip" data-value="chill">☕ Не горит</button>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label>Кто делает?</label>
+            <select id="assigneeSelect">
+              <option value="Anyone">Любой</option>
+              <option value="Him">Он</option>
+              <option value="Her">Она</option>
+            </select>
+          </div>
+        </div>
+      </main>
+
+      <div class="bottom-action">
+        <button id="createBtn" class="main-btn">
+          <span class="btn-text">Создать задачу</span>
+          <div class="btn-shine"></div>
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
